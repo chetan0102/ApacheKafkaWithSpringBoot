@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "93b45b8e-de9b-4f90-92d9-68856c48407f",
+		"name": "Apache Kafka With Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3843450"
+	},
+	"item": [
+		{
+			"name": "String type Producer and Consumer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/publish?message=hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"publish"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "hello"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSON type Producer and Consumer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"fname\": \"Tarun\",\r\n    \"lname\": \"Rai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/publish/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"publish",
+						"json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
